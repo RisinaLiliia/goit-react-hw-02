@@ -13,14 +13,14 @@ function App() {
       : { good: 0, neutral: 0, bad: 0 };
   });
 
+  useEffect(() => {
+    localStorage.setItem("feedback", JSON.stringify(feedback));
+  }, [feedback]);
+
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
   const positivePercentage = totalFeedback
     ? Math.round((feedback.good / totalFeedback) * 100)
     : 0;
-
-  useEffect(() => {
-    localStorage.setItem("feedback", JSON.stringify(feedback));
-  }, [feedback]);
 
   const updateFeedback = (feedbackType) => {
     setFeedback((prevFeedback) => ({
@@ -31,6 +31,7 @@ function App() {
 
   const resetFeedback = () => {
     setFeedback({ good: 0, neutral: 0, bad: 0 });
+    localStorage.removeItem("feedback");
   };
 
   return (
