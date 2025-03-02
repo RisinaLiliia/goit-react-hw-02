@@ -1,4 +1,4 @@
-import styles from "./options.module.css";
+import styles from "./Options.module.css";
 
 function Options({ updateFeedback, resetFeedback, totalFeedback }) {
   return (
