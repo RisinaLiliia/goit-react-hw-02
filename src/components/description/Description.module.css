@@ -1,0 +1,18 @@
+.description {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.description h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.description p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
